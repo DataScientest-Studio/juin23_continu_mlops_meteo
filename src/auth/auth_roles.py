@@ -3,8 +3,8 @@ import logging
 
 from fastapi import Depends, HTTPException
 
-from src.auth.auth_model import User
-from src.auth.auth_handler import get_user, get_current_user
+from auth.auth_model import User
+from auth.auth_handler import get_user, get_current_user
 
 
 class RoleChecker:
