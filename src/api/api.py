@@ -9,22 +9,22 @@ from fastapi import FastAPI, Body, Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from app.auth.auth_model import User, UserLoginSchema, UserInDB, Token
+from src.auth.auth_model import User, UserLoginSchema, UserInDB, Token
 
-from app.auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
+from src.auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
 
-from app.auth.auth_roles import RoleChecker
-from app.auth.auth_roles import get_user, get_current_user
+from src.auth.auth_roles import RoleChecker
+from src.auth.auth_roles import get_user, get_current_user
 
 
 # Bibliothèques pour connection à POSTGRES
 from sqlalchemy.orm import Session
 
-from app.db import crud, models, schemas
+from src.data import crud, models, schemas
 
-from app.db.schemas import WeatherAUS as SchemaWeatherAUS
-from app.db.models import WeatherAUS as ModelWeatherAUS
-from app.db.database import SessionLocal, engine
+from src.data.schemas import WeatherAUS as SchemaWeatherAUS
+from src.data.models import WeatherAUS as ModelWeatherAUS
+from src.data.database import SessionLocal, engine
 
 from typing import List
 
@@ -35,7 +35,7 @@ import pickle
 import io
 import nest_asyncio
 
-from app.modelpred.pred_model import data
+from src.models.predict_model import data
 
 
 # Initialisation de la BDD POSTGRES
