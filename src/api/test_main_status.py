@@ -15,7 +15,7 @@ data = {
   "AMT_ANNUITY": 21051,
   "EXT_SOURCE_2": 0.13,
   "EXT_SOURCE_3": 0.13,
-  "AGE": 33,
+  "AGE": 32,
   "ANCIENNITE": 4
 }
 
