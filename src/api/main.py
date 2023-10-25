@@ -28,6 +28,9 @@ class data(BaseModel):
 #with open("model.pkl", "rb") as f:
 #    loaded_model = pickle.load(f)
 
+@app.get("/")
+async def read_main():
+    return {"msg": "Hello World"}
 
 nest_asyncio.apply()
 
