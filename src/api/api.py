@@ -157,3 +157,8 @@ def get_prediction(data: data):
     return prediction[0]
 
 nest_asyncio.apply()
+
+# added by MDG to test pytest
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='0.0.0.0', port=8000)
