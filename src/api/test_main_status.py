@@ -6,7 +6,7 @@ client = TestClient(app)
 
 data = {
   "NAME_CONTRACT_TYPE": 0,
-  "CODE_GENDER": 0,
+  "CODE_GENDER": 1,
   "FLAG_OWN_CAR": 0,
   "FLAG_OWN_REALTY": 1,
   "CNT_CHILDREN": 1,
