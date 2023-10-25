@@ -30,15 +30,6 @@ class data(BaseModel):
     
 @app.post('/')
 
-
-@app.get("/OK")
-def get_image_ok():
-    return FileResponse("local0.png")
-
-@app.get("/KO")
-def get_image_ko():
-    return FileResponse("local1.png")
-
 nest_asyncio.apply()
 
 if __name__ == '__main__':
