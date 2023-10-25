@@ -29,26 +29,7 @@ class data(BaseModel):
 #    loaded_model = pickle.load(f)
     
 @app.post('/')
-def get_prediction(data: data):
-    received = data.dict()
-    NAME_CONTRACT_TYPE = received['NAME_CONTRACT_TYPE']
-    CODE_GENDER = received['CODE_GENDER']
-    FLAG_OWN_CAR = received['FLAG_OWN_CAR'] 
-    FLAG_OWN_REALTY = received['FLAG_OWN_REALTY']
-    CNT_CHILDREN = received['CNT_CHILDREN']
-    AMT_INCOME_TOTAL = received['AMT_INCOME_TOTAL']
-    AMT_CREDIT = received['AMT_CREDIT']
-    AMT_ANNUITY = received['AMT_ANNUITY']
-    EXT_SOURCE_2 = received['EXT_SOURCE_2']
-    EXT_SOURCE_3 = received['EXT_SOURCE_3']
-    AGE = received['AGE']
-    ANCIENNITE = received['ANCIENNITE']
 
-#    prediction = loaded_model.predict_proba([[NAME_CONTRACT_TYPE, CODE_GENDER, FLAG_OWN_CAR, FLAG_OWN_REALTY,
-#                                        CNT_CHILDREN, AMT_INCOME_TOTAL, AMT_CREDIT, AMT_ANNUITY,
-#					EXT_SOURCE_2, EXT_SOURCE_3, AGE, ANCIENNITE]])[:, 1]
-    
-#    return prediction[0]
 
 @app.get("/OK")
 def get_image_ok():
