@@ -48,7 +48,7 @@ def get_prediction(data: data):
 #                                        CNT_CHILDREN, AMT_INCOME_TOTAL, AMT_CREDIT, AMT_ANNUITY,
 #					EXT_SOURCE_2, EXT_SOURCE_3, AGE, ANCIENNITE]])[:, 1]
     
-    return prediction[0]
+#    return prediction[0]
 
 @app.get("/OK")
 def get_image_ok():
