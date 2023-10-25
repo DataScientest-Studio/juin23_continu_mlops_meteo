@@ -44,9 +44,9 @@ def get_prediction(data: data):
     AGE = received['AGE']
     ANCIENNITE = received['ANCIENNITE']
 
-    prediction = loaded_model.predict_proba([[NAME_CONTRACT_TYPE, CODE_GENDER, FLAG_OWN_CAR, FLAG_OWN_REALTY,
-                                        CNT_CHILDREN, AMT_INCOME_TOTAL, AMT_CREDIT, AMT_ANNUITY,
-					EXT_SOURCE_2, EXT_SOURCE_3, AGE, ANCIENNITE]])[:, 1]
+#    prediction = loaded_model.predict_proba([[NAME_CONTRACT_TYPE, CODE_GENDER, FLAG_OWN_CAR, FLAG_OWN_REALTY,
+#                                        CNT_CHILDREN, AMT_INCOME_TOTAL, AMT_CREDIT, AMT_ANNUITY,
+#					EXT_SOURCE_2, EXT_SOURCE_3, AGE, ANCIENNITE]])[:, 1]
     
     return prediction[0]
 
