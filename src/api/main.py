@@ -27,8 +27,7 @@ class data(BaseModel):
 #Loading the trained model
 #with open("model.pkl", "rb") as f:
 #    loaded_model = pickle.load(f)
-    
-@app.post('/')
+
 
 nest_asyncio.apply()
 
