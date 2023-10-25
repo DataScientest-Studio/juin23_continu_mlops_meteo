@@ -25,8 +25,8 @@ class data(BaseModel):
 	ANCIENNITE : float
 
 #Loading the trained model
-with open("model.pkl", "rb") as f:
-    loaded_model = pickle.load(f)
+#with open("model.pkl", "rb") as f:
+#    loaded_model = pickle.load(f)
     
 @app.post('/')
 def get_prediction(data: data):
