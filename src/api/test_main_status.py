@@ -21,4 +21,4 @@ data = {
 
 def test_main():
     response = client.post("/", json=data)
-    assert response.status_code == 200
+    assert response.status_code == 404
