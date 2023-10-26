@@ -26,6 +26,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        # MDG added to test pytest module
+        pip install uvicorn
+        pip install httpx
+        pip install auth
+        # MDG fin
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
