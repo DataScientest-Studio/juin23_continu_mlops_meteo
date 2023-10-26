@@ -19,4 +19,4 @@ def get_weatherAUS_data(db: Session):
     #return db.query(models.WeatherAUS).all()
 
 def get_weatherSYDNEY_data(db: Session):
-    return db.query(models.WeatherAUS).filter(models.WeatherAUS.location == 'Sydney').limit(5).all()
+    return db.query(models.WeatherAUS).filter(models.WeatherAUS.Location == 'Sydney').limit(5).all()
