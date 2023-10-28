@@ -9,7 +9,7 @@ from fastapi import FastAPI, Body, Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from auth.auth_model import User, UserLoginSchema, UserInDB, Token
+from src.auth.auth_model import User, UserLoginSchema, UserInDB, Token
 
 from auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
 
