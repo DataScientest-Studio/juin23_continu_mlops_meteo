@@ -3,7 +3,19 @@ from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy.ext.declarative import declarative_base
 
-SQLALCHEMY_DATABASE_URL = "postgresql://issam:test123!@localhost:5433/weatherAUS"
+from decouple import config
+
+DB_USERNAME = config("POSTGRES_USERNAME")
+DB_PASSWORD = config("POSTGRES_PASSWORD")
+
+DB_SERVER = config("POSTGRES_SERVER")
+DB_PORT = config("POSTGRES_PORT")
+DB_DATABASE = config("POSTGRES_DB")
+
+DB_URL = config("RDS_URL")
+
+#SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_SERVER}:{DB_PORT}/{DB_DATABASE}"
+SQLALCHEMY_DATABASE_URL = DB_URL
 
 #engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_pre_ping=True)
 engine = create_engine(SQLALCHEMY_DATABASE_URL, echo=True)
