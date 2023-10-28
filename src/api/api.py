@@ -156,11 +156,6 @@ def get_prediction(data: data):
 
     return prediction[0]
 
-# added by MDG to test pytest
-
-@app.get("/")
-async def read_main():
-    return {"msg": "Hello World"}
 
 
 nest_asyncio.apply()
