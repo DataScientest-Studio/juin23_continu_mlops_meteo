@@ -4,7 +4,7 @@ from fastapi.testclient import TestClient
 
 from src.api.api import app 
 
-secret = 'd05669a75db8538349e3cfbe3c8d0b13f9b4cddc6725602e74ffe7fb981e31d8' 
+secret = os.getenv('secret')
 
 client = TestClient(app)
 
