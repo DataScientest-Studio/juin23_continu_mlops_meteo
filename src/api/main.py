@@ -24,7 +24,7 @@ class data(BaseModel):
 	AGE: float
 	ANCIENNITE : float
 
-#Loading the trained model
+#Loading the trained model - Test CICD
 #with open("model.pkl", "rb") as f:
 #    loaded_model = pickle.load(f)
 
