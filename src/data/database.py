@@ -5,10 +5,11 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from decouple import config
 
-DB_USERNAME = config("POSTGRES_USERNAME")
+DB_USERNAME = config("POSTGRES_USER")
 DB_PASSWORD = config("POSTGRES_PASSWORD")
 
-DB_SERVER = config("POSTGRES_SERVER")
+#DB_SERVER = config("POSTGRES_SERVER")
+DB_SERVER = 'prj-network_from_compose'
 DB_PORT = config("POSTGRES_PORT")
 DB_DATABASE = config("POSTGRES_DB")
 

@@ -90,3 +90,9 @@ target/
 
 # pickle files
 *.pkl
+
+# specific files (Issam)
+/docker-compose_api.yml
+/docker-compose_db.yml
+/src/data/postgres-backup/postgres_backup.sql
+/src/data/postgres-backup/postgres_backup.tar
