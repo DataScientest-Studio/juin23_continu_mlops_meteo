@@ -4,7 +4,7 @@ from fastapi.testclient import TestClient
 
 from src.api.api import app 
 
-JWT_SECRET = config("secret")
+secret = os.environ['JWT_SECRET']
 
 client = TestClient(app)
 
