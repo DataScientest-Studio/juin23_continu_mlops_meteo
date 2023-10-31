@@ -6,7 +6,7 @@ from src.api.api import app
 
 import os
 
-secret = os.environ['JWT_SECRET']
+#secret = os.environ['JWT_SECRET']
 
 client = TestClient(app)
 
