@@ -35,7 +35,7 @@ import pickle
 import io
 import nest_asyncio
 
-from models.predict_model import data
+from src.models.predict_model import data
 
 
 # Initialisation de la BDD POSTGRES
