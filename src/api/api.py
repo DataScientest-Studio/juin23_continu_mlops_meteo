@@ -9,12 +9,12 @@ from fastapi import FastAPI, Body, Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from src.auth.auth_model import User, UserLoginSchema, UserInDB, Token
+from auth.auth_model import User, UserLoginSchema, UserInDB, Token
 
-from src.auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
+from auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
 
-from src.auth.auth_roles import RoleChecker
-from src.auth.auth_roles import get_user, get_current_user
+from auth.auth_roles import RoleChecker
+from auth.auth_roles import get_user, get_current_user
 
 
 # Bibliothèques pour connection à POSTGRES
