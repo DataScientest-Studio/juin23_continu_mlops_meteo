@@ -13,7 +13,7 @@ DB_SERVER = 'prj-network_from_compose'
 DB_PORT = config("POSTGRES_PORT")
 DB_DATABASE = config("POSTGRES_DB")
 
-DB_URL = config("RDS_URL")
+#DB_URL = config("RDS_URL")
 
 SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_SERVER}:{DB_PORT}/{DB_DATABASE}"
 #SQLALCHEMY_DATABASE_URL = DB_URL
