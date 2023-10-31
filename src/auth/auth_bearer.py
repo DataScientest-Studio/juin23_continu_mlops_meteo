@@ -11,7 +11,7 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from passlib.context import CryptContext
 
-from src.auth.auth_model import Token, UserInDB, TokenData
+from auth.auth_model import Token, UserInDB, TokenData
 
 
 JWT_SECRET = config("secret")
