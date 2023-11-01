@@ -4,10 +4,6 @@ from fastapi.testclient import TestClient
 
 from src.api.api import app 
 
-import os
-
-#secret = os.environ['JWT_SECRET']
-
 client = TestClient(app)
 
 def test_main_status():
