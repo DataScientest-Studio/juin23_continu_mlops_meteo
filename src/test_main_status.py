@@ -1,12 +1,8 @@
-#pytest uniwst test example test 1
+#pytest uniwst test example test 2
 
 from fastapi.testclient import TestClient 
 
 from src.api.api import app 
-
-import os
-
-#secret = os.environ['JWT_SECRET']
 
 client = TestClient(app)
 
