@@ -7,6 +7,8 @@ services:
   db:
     image: postgres:15.4
     container_name: prj-db-container_from_compose
+    expose:
+      - 5432
     restart: always
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
@@ -17,8 +19,6 @@ services:
     volumes:
       - ./src/data/postgres-backup/db.sql:/docker-entrypoint-initdb.d/db.sql
       - postgres-db-volume:/var/lib/postgresql/data
-    #ports:
-    #  - "5454:5432"
     networks:
       - prj-network_from_compose
 
@@ -45,8 +45,8 @@ services:
       #- POSTGRES_SERVER=${POSTGRES_SERVER}
       - POSTGRES_PORT=${POSTGRES_PORT}
       - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_URL=${POSTGRES_URL}
-      - RDS_URL=${RDS_URL}
+      #- POSTGRES_URL=${POSTGRES_URL}
+      #- RDS_URL=${RDS_URL}
     depends_on:
       - db
     restart: always

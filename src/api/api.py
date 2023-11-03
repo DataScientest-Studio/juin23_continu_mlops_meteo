@@ -9,22 +9,22 @@ from fastapi import FastAPI, Body, Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from src.auth.auth_model import User, UserLoginSchema, UserInDB, Token
+from auth.auth_model import User, UserLoginSchema, UserInDB, Token
 
-from src.auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
+from auth.auth_handler import users_db, verify_password, get_password_hash, get_user, authenticate_user, create_access_token, get_current_user
 
-from src.auth.auth_roles import RoleChecker
-from src.auth.auth_roles import get_user, get_current_user
+from auth.auth_roles import RoleChecker
+from auth.auth_roles import get_user, get_current_user
 
 
 # Bibliothèques pour connection à POSTGRES
 from sqlalchemy.orm import Session
 
-from src.data import crud, models, schemas
+from data import crud, models, schemas
 
-from src.data.schemas import WeatherAUS as SchemaWeatherAUS
-from src.data.models import WeatherAUS as ModelWeatherAUS
-from src.data.database import SessionLocal, engine
+from data.schemas import WeatherAUS as SchemaWeatherAUS
+from data.models import WeatherAUS as ModelWeatherAUS
+from data.database import SessionLocal, engine
 
 from typing import List
 
@@ -35,7 +35,7 @@ import pickle
 import io
 import nest_asyncio
 
-from src.models.predict_model import data
+from models.predict_model import data
 
 
 # Initialisation de la BDD POSTGRES
@@ -86,7 +86,7 @@ async def read_welcome():
     return "Bienvenue dans l'API créée par Issam B."
 
 
-"""@app.get("/myfile", responses=reponses_HTTP, dependencies=[Depends(allow_access)], tags=["Test de l'API"])
+"""@app.get("/myfile", responses=reponses_HTTP, dependencies=[Depends(allow_access)], tags=["Téléchargement de données depuis fichier .csv"])
 def get_myfile():
     return "En attente de chargement du fichier"
 """
