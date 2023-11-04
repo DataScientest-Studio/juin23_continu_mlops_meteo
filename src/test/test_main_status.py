@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 import sys  
 sys.path.append('src')
 
-from api_v2 import app 
+from scr.test.api_v2 import app 
 
 client = TestClient(app)
 
