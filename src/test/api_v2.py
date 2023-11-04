@@ -1,4 +1,3 @@
-### Bibliothèque pour OAuth2
 import uvicorn
 import pandas as pd
 import random
@@ -14,6 +13,22 @@ from fastapi.responses import FileResponse, StreamingResponse
 import pickle
 import io
 import nest_asyncio
+
+class data(BaseModel):
+    Location : float
+    Rainfall : float
+    WindGustDir : float
+    WindGustSpeed : float
+    WindDir9am : float
+    WindDir3am : float
+    WindSpeed9am : float
+    WindSpeed3am : float
+    Humidity9am : float
+    Humidity3am : float
+    Pressure3pm : float
+    Temp3pm : float
+    RainToday : float
+
 
 # Initialisation de l'API
 app = FastAPI(
