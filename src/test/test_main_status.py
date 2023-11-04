@@ -2,11 +2,7 @@
 
 from fastapi.testclient import TestClient 
 
-# Added by Issam B. for pytest
-import sys  
-sys.path.append('src')
-
-from scr.test.api_v2 import app 
+from main import app 
 
 client = TestClient(app)
 
